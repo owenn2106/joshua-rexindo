@@ -1,0 +1,65 @@
+.header {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../images/header.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+}
+
+.header-description {
+  margin: 2rem 0 3rem 0;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+.header-cta {
+  color: white;
+  background-color: red;
+  border: 2px solid red;
+  padding: 1rem 1.5rem;
+
+  transition: all 0.3s ease;
+}
+
+.header-cta span {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.header-cta:hover {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 790px) {
+  .header-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header-title br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+  }
+}

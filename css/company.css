@@ -1,0 +1,77 @@
+.company {
+  margin: 1em 0 5em;
+}
+
+.company .container {
+  display: flex;
+}
+
+@media screen and (max-width: 920px) {
+  .company .container {
+    flex-direction: column-reverse;
+  }
+}
+
+.company .container > * {
+  flex-basis: 100%;
+}
+
+.company-left {
+  padding-left: 2em;
+}
+
+@media screen and (max-width: 920px) {
+  .company-left {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.company-right {
+  padding-left: 2em;
+}
+
+.company-title {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 920px) {
+  .company-right {
+    padding-left: 0;
+  }
+}
+
+.company-title:nth-of-type(2) {
+  padding-bottom: 1em;
+}
+
+.company-description {
+  padding-bottom: 1.5em;
+  line-height: 1.5rem;
+}
+
+/* FOR OVERLAPPING IMAGES */
+
+.image-stack {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+}
+
+.image-stack__item--bottom {
+  grid-column: 1 / span 8;
+  grid-row: 1;
+  padding-top: 30%;
+  z-index: 1;
+}
+
+.image-stack__item--top {
+  grid-column: 4 / -1;
+  grid-row: 1;
+}
+
+.image-stack img {
+  width: 100%;
+  display: block;
+}

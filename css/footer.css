@@ -1,0 +1,160 @@
+footer {
+  height: 100%;
+  bottom: 0;
+  width: 100%;
+  padding: 3em 0 1em 0;
+  background-color: #020c1d;
+  color: white;
+}
+
+.top-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5em 2em 5em;
+}
+
+.top-content img {
+  max-height: 5em;
+  padding-right: 1em;
+}
+
+.top-content h3 {
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1150px) {
+  .top-content img {
+    max-height: 4.5em;
+  }
+
+  .top-content h3 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1075px) {
+  .top-content img {
+    max-height: 4em;
+  }
+
+  .top-content h3 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .top-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top-content h3 {
+    padding-top: 1em;
+  }
+
+  .top-content img {
+    padding-right: 0;
+  }
+}
+
+.main-content {
+  display: flex;
+}
+
+.main-content .box {
+  flex-basis: 50%;
+  padding: 10px 50px;
+}
+
+.box h2 {
+  font-size: 1.8rem;
+}
+
+.box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.box .content:before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  height: 1px;
+  width: 100%;
+  background: red;
+}
+
+.left .content p {
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+}
+
+.left .content .social {
+  margin: 20px 0 0 0;
+}
+
+.left .content .social a {
+  margin: 0 2px;
+}
+
+.left .content .social a span {
+  height: 60px;
+  width: 60px;
+  color: white;
+  background: transparent;
+  line-height: 60px;
+  text-align: center;
+  font-size: 2rem;
+  border: 5px;
+  transition: 0.3s;
+}
+
+.left .content .social a span:hover {
+  cursor: pointer;
+  background: red;
+}
+
+.footer-links li {
+  list-style: none;
+  padding-bottom: 1em;
+}
+
+.footer-links li a {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  color: white;
+}
+
+.right .content iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 5em;
+}
+
+.bottom h4 {
+  font-weight: normal;
+}
+
+@media screen and (max-width: 850px) {
+  .main-content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .bottom {
+    flex-direction: column;
+  }
+
+  .bottom span {
+    padding-top: 2em;
+  }
+}

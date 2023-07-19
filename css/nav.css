@@ -1,0 +1,182 @@
+nav {
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 5em;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  z-index: 10;
+
+  background-color: transparent;
+  transition: all 200ms linear;
+}
+
+.initialRender {
+  opacity: 0;
+}
+
+/* Changes color after scroll */
+nav.scrolled {
+  background-color: #eee !important;
+  transition: background-color 200ms linear;
+  box-shadow: 0px 5px 20px grey;
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    padding: 0 2em;
+  }
+}
+
+.burger {
+  z-index: 100;
+  cursor: pointer;
+
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.5s ease;
+  /* transform-origin: right; */
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  max-height: 3.5em;
+  padding-right: 1em;
+}
+
+.nav-logo h3 {
+  letter-spacing: 0.1em;
+  font-size: 1.4rem;
+}
+
+.nav-links {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  list-style: none;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: black;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transform: scaleX(0);
+  transition: transform 500ms ease;
+}
+
+.nav-links li:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-links li a {
+  letter-spacing: 0.2em;
+}
+
+.nav-socials span {
+  font-size: 2rem;
+  transition: all 200ms ease;
+}
+
+.nav-socials span:hover {
+  transform: scale(1.1);
+  color: red;
+}
+
+@media screen and (max-width: 1000px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #00101a;
+
+    flex-direction: column;
+    justify-content: center;
+
+    transform: translateY(-100%);
+    opacity: 0;
+    transform: opacity 300ms ease;
+  }
+
+  .nav-links li {
+    margin: 3em 0;
+    opacity: 0;
+  }
+
+  .nav-links li a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+
+    transition: all 300ms ease;
+  }
+
+  .nav-links li:hover a {
+    color: black;
+  }
+
+  .nav-socials {
+    display: none;
+  }
+}
+
+.nav-active {
+  transform: translateY(0%);
+  opacity: 1;
+  position: fixed;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  background-color: white;
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  background-color: white;
+}
